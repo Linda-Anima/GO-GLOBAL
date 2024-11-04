@@ -722,8 +722,31 @@ font-size: 40px;
   }
 }
 
+/* Style for the service cards to ensure horizontal alignment */
+@media (min-width: 992px) {
+  .Serve {
+      display: flex;
+      justify-content: space-between; /* Ensures even spacing between cards */
+      gap: 20px; /* Optional: spacing between cards */
+  }
 
+  /* Make sure each card takes up one-third of the width on large screens */
+  .Serve .col-lg-4 {
+      flex: 1; /* Ensures equal width for each column */
+      max-width: 30%; /* Adjust width if necessary */
+  }
+}
 
+.custom-block-wrap {
+  background-color: #f9f9f9; /* Optional: background color */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
 
 
 /*----------------------------------------
@@ -847,8 +870,6 @@ Team Styling
 }
 
 
-
-
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .achievement-item {
@@ -861,9 +882,6 @@ Team Styling
     flex-basis: 100%;
   }
 }
-
-
-
 
 
 /* --------------------------------------
@@ -1383,6 +1401,7 @@ blockquote::before {
   right: 35px;
   color: #f1f1f1;
   font-size: 24px;
+  text-decoration: none;
 }
 
 .facebook-link:hover {
@@ -1393,6 +1412,9 @@ blockquote::before {
 /*---------------------------------------
   CONTACT               
 -----------------------------------------*/
+.contact a{
+  text-decoration: none;
+}
 .contact-section {
   background: var(--white-color);
 }
@@ -1614,20 +1636,22 @@ blockquote::before {
   position: relative;
   z-index: 2;
   margin-top: 70px;
-  padding-top: 25px;
+  padding-top: 30px;
   padding-bottom: 25px;
 }
 
 .site-footer-bottom a {
 	color: var(--white-color);
+  text-decoration: none;
 }
 
 .site-footer-bottom a:hover {
-	color: #FF6;
+	color: rgb(26, 21, 21);
 }
 
 .site-footer-link {
   color: var(--white-color);
+  text-decoration: none;
 }
 
 .copyright-text {
@@ -1666,6 +1690,7 @@ blockquote::before {
   vertical-align: middle;
   margin-right: 10px;
   margin-bottom: 5px;
+  text-decoration: none;
 }
 
 
@@ -1694,6 +1719,7 @@ blockquote::before {
   width: 35px;
   height: 35px;
   line-height: 38px;
+  text-decoration: none;
 }
 
 .social-icon-link:hover {
@@ -1988,659 +2014,3 @@ blockquote::before {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media (min-width: 1025px) and (max-width: 1440px) {
-  .Home-Image{
-    width: 100%;
-    height: 100vh;
-  }
-  .Home-child-1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: white; 
-    text-align: center; 
-    z-index: 1; 
-    padding: 20px; 
-  }
-  .nav-link{
-    color: #000;
-  }
-  } 
-  
-  /* For small devices (phones) */
-  @media (max-width: 575px) {
-    .Home-child-1 {
-      width: 90%; 
-      max-width: 400px; 
-      position: absolute;
-      top: 40%; 
-      left: 50%; 
-      transform: translate(-50%, -40%); 
-      padding: 10px; 
-    }
-    footer{
-      font-size: larger;
-    }
-  }
-  
-  /* For tablets */
-  @media (min-width: 576px) and (max-width: 768px) {
-    .Home-child-1 {
-      width: 80%; 
-      max-width: 500px;
-      position: absolute;
-      top: 35%; 
-      left: 50%;
-      transform: translate(-50%, -35%);
-      padding: 15px; 
-    }
-    .Mission{
-      padding-top: 20px;
-    }
-  }
-  
-  /* For desktops and larger screens */
-  @media (min-width: 769px) {
-    .Home-child-1 {
-      width: 60%; 
-      max-width: 600px; 
-      top: 50%; 
-      left: 50%; 
-      transform: translate(-50%, -50%);
-    }
-  }
-  
-  
-  
-  .nav-link{
-    color: #000;
-  }
-  
-  @media (max-width: 575px) {
-    body{
-      justify-content: center;
-      align-items: center;
-    }
-    .nav-link{
-      color: #000;
-    }
-  
-    .Home-child-1 {
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     justify-content: center;
-    }
-    .image-container{
-      width: 100%;
-    }
-  }
-  
-  .nav-link:hover{
-    color: #007bff;
-  }
-  
-  .both{
-    display: flex;
-  }
-  .both h2{
-    font-family: 'Montserrat';
-    font-size: bold;
-  }
-  
-  .btn-close{
-    position: absolute;
-    right: 20px;
-  }
-  
-  .image-container {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden; 
-  }
-  
-  .Home-Image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-    z-index: 0; 
-  }
-  
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(28, 28, 28, 0.5); 
-    z-index: 1; 
-  }
-  
-  .offcanvas{
-    width: 200px !important; 
-    background-color: rgb(201, 202, 205) !important;
-  }
-  
-  .navbar-toggler {
-    background: none; 
-    border: none; 
-    padding: 0; 
-  }
-  
-  .navbar-toggler-icon {
-    display: block;
-    width: 30px; 
-    height: 20px;
-    position: relative;
-  }
-  
-  .navbar-toggler-icon::before,
-  .navbar-toggler-icon::after,
-  .navbar-toggler-icon div {
-    content: "";
-    display: block;
-    height: 3px;
-    width: 100%; 
-    background-color: #000; 
-    position: absolute;
-  }
-  
-  .navbar-toggler-icon::before { top: 0; }
-  .navbar-toggler-icon div { top: 50%; transform: translateY(-50%); }
-  .navbar-toggler-icon::after { bottom: 0; }
-  
-  .Home-Image {
-    position: relative; 
-    background-image: url('img/HomePage 2.jpg');
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    height: 100vh; 
-    width: 100%; 
-    margin: 0;
-    padding: 0;
-  }
-  
-   .Home-child-1 {
-     position: absolute;
-    top: 40%; 
-    left: 50%; 
-    transform: translate(-50%, 0%);  
-    color: white; 
-    text-align: center; 
-    z-index: 1; 
-    padding: 30px; 
-  } 
-  
-  .Home-child-1 h3 {
-    font-family: "Poppins" ;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .Home-child-1 p {
-    font-family: "Montserrat";
-    margin: 0;
-    padding: 20;
-  }
-  
-  
-  /* ABOUT STYLING */
-  
-  #About{
-    background-color: rgb(225, 227, 236);
-    gap: 10px;
-  } 
-  
-  #About h2{
-  text-align: center;
-  padding-top: 30px;
-  font-size: 40px;
-  }
-  
-  #About p{
-    padding: 20px;
-    line-height: 35px;
-    font-size: large;
-    font-family: 'inter';
-    align-items:center;
-    text-align: center;
-    align-items: center;
-  }
-  
-  /* TEAM */
-  
-  #Team {
-    text-align: center;
-    padding: 2rem 0;
-  }
-  
-  #Team h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-  }
-  
-  #Team .card {
-    height: 100%;
-  }
-  
-  #Board{
-    margin-top: 50px;
-  }
-  
-  #Team .card-img-top {
-    width: 100%;
-    height: 250px; /* Adjust this value as needed */
-    object-fit: cover;
-    object-position: top;
-  }
-  
-  @media (max-width: 767px) {
-    #Team .card-img-top {
-      height: 300px; /* Adjust for mobile if needed */
-    }
-  }
-  
-  .card {
-    overflow: hidden;
-  }
-  
-  .card-img-top {
-    width: 100%;
-    height: auto;
-  }
-  
-  .card-title-blue {
-    color: #007bff;
-  }
-  
-  .justified-text {
-    text-align: justify;
-  }
-  
-  @media (max-width: 768px) {
-    .card-img-top {
-      height: auto;
-      max-height: 380px; 
-    }
-    .card {
-      margin-bottom:1px;
-    }
-  }
-  
-  @media (max-width: 576px) {
-    .card-img-top {
-      height: auto;
-      max-height: 250px; 
-    }
-  
-    #Team h2 {
-      font-size: 1.2rem;
-    }
-  
-    .Mission{
-      padding-top: 20px;
-    }
-  }
-  
-   #Mission-Vision {
-    font-family: 'inter';
-    font-size: 20px;
-    text-align: center;
-    justify-content: center;
-    background-color: rgb(225, 227, 236);
-    padding: 40px 0;
-  }
-  
-  #Mission-Vision .text-section {
-    margin-bottom: 20px;
-  }
-  
-  #Mission-Vision h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  #Mission-Vision .image-section img {
-    width: 100%;
-    height: auto;
-  }
-  
-  
-  @media (max-width: 768px) {
-    #Mission-Vision .text-section {
-      text-align: center;
-    }
-  }
-  
-  #Services h2{
-    padding-top: 100px;
-    text-align: center;
-    font-size: 40px; 
-    padding-bottom: 20px;
-  }
-  
-  #Services p{
-    line-height: 30px;
-    font-size: 15px;
-    text-align: justify;
-  }
-  
-  .text-bg-light{
-    height: 350px;
-  }
-  
-  body {
-    font-family: 'Arial', sans-serif;
-  }
-  
-  .achievements {
-    background-color: #1e1e1e;
-    color: white;
-    padding: 100px 0;
-    margin-top: 60px;
-    text-align: center;
-  }
-  
-  .achievements h1{
-    padding-bottom: 20px;
-  }
-  
-  .section-title {
-    font-size: 2rem;
-    margin-bottom: 10px;
-  }
-  
-  .section-description {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-  }
-  
-  .achievement-numbers {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  
-  .achievement-item {
-    margin: 20px;
-    flex-basis: 20%;
-  }
-  
-  .achievement-item h3 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-  }
-  
-  .achievement-item p {
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: #cccccc;
-  }
-  
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .achievement-item {
-      flex-basis: 45%;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .achievement-item {
-      flex-basis: 100%;
-    }
-  }
-  
-  /* Contact section styling */
-  #contact {
-    max-width: 800px;
-    align-items: center;
-  }
-  
-  .contact h1 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  .Contact{
-    padding-top: 60px;
-    text-align: center;
-  }
-  .contact ul {
-    list-style: none;
-    padding-bottom: 60px;
-    margin: 0;
-  }
-  
-  .contact li {
-    margin-bottom: 15px;
-    font-size: 1.1rem;
-    color: #333;
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-  }
-  
-  .fab-link{
-    text-decoration: none;
-  }
-  
-  .contact i {
-    margin-right: 15px;
-    color: #007bff; 
-    font-size: 1.3rem;
-  }
-  
-  .contact span {
-    display: inline-block;
-    vertical-align: middle;
-  }
-  
-  .contact span:nth-child(2) {
-    font-weight: bold; 
-    color: #007bff;
-  }
-  
-  .contact li span:first-child {
-    font-weight: 600;
-    margin-right: 10px;
-    color: #666; 
-  }
-  
-  @media (max-width: 768px) {
-    .contact {
-      padding: 20px;
-    }
-  
-    .contact h1 {
-      font-size: 2rem;
-    }
-  
-    .contact li {
-      flex-direction: column; 
-      text-align: left;
-      justify-content: flex-start; 
-    }
-  
-    .contact li span:nth-child(2) {
-      margin-top: 5px;
-    }
-  } 
-  
-  
-  /* FAQ Section Styles */
-  .faq-section {
-    background-color: #f9f9f9; 
-    color: #333; 
-  }
-  
-  .faq-section h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
-  .accordion-button {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: #333;
-    background-color: #fff;
-    border: none;
-    box-shadow: none;
-    transition: background-color 0.3s ease;
-  }
-  
-  .accordion-button:hover, .accordion-button:not(.collapsed) {
-    background-color: #007bff;
-    color: #fff;
-  }
-  
-  .accordion-body {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
-    color: #555;
-    background-color: #fff;
-  }
-  
-  .accordion-item {
-    border: none;
-    margin-bottom: 10px;
-  }
-  
-  .accordion-button:focus {
-    box-shadow: none;
-  }
-  
-  @media (max-width: 768px) {
-    .faq-section h2 {
-      font-size: 2rem;
-    }
-    
-    .accordion-button {
-      font-size: 1rem;
-    }
-  }
-  
-  footer{
-  
-    padding: 40px;
-    margin-top: 20px;
-    color: #ffffff;
-    background-color: rgb(30, 15, 243);
-    text-align: center;
-  }
-  
-  /* Gallery Styles */
-  #Gallery {
-    text-align: center;
-    margin-top: 50px;
-  }
-  
-  .gallery-wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  .gallery-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-  }
-  
-  .gallery-container img {
-    width: 300px;  /* Increased from 200px */
-    height: 300px; /* Increased from 200px */
-    object-fit: cover;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-  }
-  
-  .gallery-container img:hover {
-    transform: scale(1.05);
-  }
-  
-  /* Modal Styles */
-  .modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.9);
-  }
-  
-  .modal-content {
-    position: relative;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-  }
-  
-  #expandedImage {
-    max-width: 90%;
-    max-height: 90%;
-    object-fit: contain;
-  }
-  
-  .close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-  .facebook-link {
-    position: absolute;
-    bottom: 15px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 24px;
-  }
-  
-  .facebook-link:hover {
-    color: #3b5998;
-  }

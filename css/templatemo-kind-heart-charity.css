@@ -722,20 +722,6 @@ font-size: 40px;
   }
 }
 
-/* Style for the service cards to ensure horizontal alignment */
-@media (min-width: 992px) {
-  .Serve {
-      display: flex;
-      justify-content: space-between; /* Ensures even spacing between cards */
-      gap: 20px; /* Optional: spacing between cards */
-  }
-
-  /* Make sure each card takes up one-third of the width on large screens */
-  .Serve .col-lg-4 {
-      flex: 1; /* Ensures equal width for each column */
-      max-width: 30%; /* Adjust width if necessary */
-  }
-}
 
 .custom-block-wrap {
   background-color: #f9f9f9; /* Optional: background color */
@@ -747,6 +733,7 @@ font-size: 40px;
   flex-direction: column;
   height: 100%;
 }
+
 
 
 /*----------------------------------------
@@ -858,6 +845,7 @@ Team Styling
 }
 
 .achievement-item h3 {
+  color: whitesmoke;
   font-size: 3rem;
   margin-bottom: 10px;
 }
